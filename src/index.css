@@ -8,57 +8,50 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 250 60% 8%;
-    --foreground: 210 40% 98%;
+    --background: 0 0% 100%;
+    --foreground: 215 35% 15%;
 
-    --card: 250 50% 12%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 100%;
+    --card-foreground: 215 35% 15%;
 
-    --popover: 250 50% 12%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 35% 15%;
 
-    --primary: 189 100% 60%;
-    --primary-foreground: 250 60% 8%;
+    --primary: 215 60% 20%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 320 100% 70%;
-    --secondary-foreground: 250 60% 8%;
+    --secondary: 188 65% 38%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 250 40% 20%;
-    --muted-foreground: 215 20% 70%;
+    --muted: 210 20% 96%;
+    --muted-foreground: 215 15% 45%;
 
-    --accent: 270 60% 60%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 188 65% 38%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 75% 45%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 250 40% 25%;
-    --input: 250 40% 20%;
-    --ring: 189 100% 60%;
+    --border: 215 20% 88%;
+    --input: 215 20% 88%;
+    --ring: 188 65% 38%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
-    --gradient-start: 189 100% 60%;
-    --gradient-end: 320 100% 70%;
-    
-    --sidebar-background: 250 60% 10%;
-    --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 189 100% 60%;
-    --sidebar-primary-foreground: 250 60% 8%;
-    --sidebar-accent: 250 50% 15%;
-    --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 250 40% 25%;
-    --sidebar-ring: 189 100% 60%;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 215 35% 15%;
+    --sidebar-primary: 215 60% 20%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 20% 96%;
+    --sidebar-accent-foreground: 215 35% 15%;
+    --sidebar-border: 215 20% 88%;
+    --sidebar-ring: 188 65% 38%;
   }
 }
 
 @layer utilities {
   .gradient-text {
     @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
-  }
-  
-  .glass-card {
-    @apply backdrop-blur-md bg-card/30 border border-border/50;
   }
 }
 
@@ -68,6 +61,7 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
   }
 }
